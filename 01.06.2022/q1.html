@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+    <script>
+        window.addEventListener("DOMContentLoaded",()=>{
+
+        const email = document.querySelector("#email");
+        const password = document.querySelector("#password");
+        const location = document.querySelector("#location");
+        const register = document.querySelector("#register");
+        const login = document.querySelector("#login");
+        const msg = document.querySelector("#msg");
+
+        login.addEventListener('click', () => {
+        console.log(" Login button clicked");
+    });
+
+    register.addEventListener('click', () => {
+        console.log(" Register button clicked");
+        if(email.value == "a" && password.value == "b" && location.value == "c" ){
+            msg.innerHTML="Registration failed";
+        }
+        else{
+            msg.innerHTML="Registration suceeded";
+        }
+    });
+
+
+})// end of DOM content loaded
+
+    </script>
+</head>
+<body>
+    Email : <input type="text" name="" id="email"><br>
+    password : <input type="text" name="" id="password"><br>
+    location : <input type="text" name="" id="location"><br>
+    <input type="button" value="register" id="register">
+    <input type="button" value="Login" id="login"><br>
+    <span id="msg"></span>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <script>
+      window.addEventListener("DOMContentLoaded",()=>{
+
+        const num1 = document.querySelector("#num1");
+        const num2 = document.querySelector("#num2");
+        const multiply = document.querySelector("#multiply");
+        const subtract = document.querySelector("#subtract");
+        const msg = document.querySelector("#msg");
+
+        multiply.addEventListener('click', () => {
+        let result = num1.value * num2.value;
+        msg.innerHTML=result;
+        });
+
+
+        subtract.addEventListener('click', () => {
+        let result = num1.value - num2.value;
+        msg.innerHTML=result;
+        });
+
+        
+
+        })// end of DOM content loaded
+
+    </script>
+</head>
+<body>
+    num1 : <input type="text" name="" id="num1"><span id="msg"> Result</span><br>
+    num2 : <input type="text" name="" id="num2"><br>
+    <input type="button" value="multiply" id="multiply">
+    <input type="button" value="subtract" id="subtract">
+</body>
+</html>
