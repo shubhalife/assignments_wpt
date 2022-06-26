@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+
+    <script>
+
+window.addEventListener("DOMContentLoaded",()=>{
+
+const id = document.querySelector("#id");
+const password = document.querySelector("#password");
+const btn = document.querySelector("#btn");
+const msg = document.querySelector("#msg");
+
+function check(){
+  if(id.value == password.value){
+      return "Login successful";
+  }
+  else{
+    return "Login failed";
+  }
+   
+}
+
+btn.addEventListener('click', () => {
+    // console.log("hello");
+    msg.innerHTML=check();
+});
+
+
+});// end of dom
+    </script>
+</head>
+<body>
+
+    userid : <input type="text" name="" id="id"><span id="msg"></span><br><br>
+    password : <input type="text" name="" id="password"><br><br>
+    <input type="button" value="Sign in" id="btn">
+
+    
+    
+</body>
+</html>
