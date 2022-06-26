@@ -8,7 +8,7 @@ let dbparams =
     host: 'localhost',
     user: 'root',
     password: 'cdac',
-    database: 'manage',
+    database: 'wpt',
     port: 3306
 };
 
