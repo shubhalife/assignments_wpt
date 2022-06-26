@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empno</title>
+    <script>
+
+window.addEventListener("DOMContentLoaded",()=>{
+
+const empno = document.querySelector("#empno");
+const deptid = document.querySelector("#deptid");
+const location = document.querySelector("#location");
+
+
+function check(num){
+    
+
+    if(num%2==0){
+        return true;
+    }else{
+        return false;
+    }
+   
+}
+
+empno.addEventListener('blur', () => {
+    let num=empno.value;
+    let op=check(num);
+    if(num==0){
+        window.alert("empdetails not found");
+    }else if(op){
+        deptid.value="2";
+        location.value="mumbai";
+    }else{
+        deptid.value="3";
+        location.value="pune";
+    }
+
+
+});
+
+
+});// end of dom
+
+
+    </script>
+</head>
+<body>
+    empno : <input type="text" name="" id="empno"><br><br>
+    dept id : <input type="text" name="" id="deptid"><br><br>
+    location  : <input type="text" name="" id="location"><br><br>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palindrome and reverse</title>
+    <script>
+        window.addEventListener("DOMContentLoaded",()=>{
+
+        const text = document.querySelector("#text");
+        const palindrome = document.querySelector("#palindrome");
+        const reverse = document.querySelector("#reverse");
+        const msg = document.querySelector("#msg");
+
+        function rev(){
+            let arr=text.value.split("");
+            let str="";
+            arr.forEach(element => {
+                str = element + str;
+            });
+
+            return str;
+        }
+
+        reverse.addEventListener('click', () => {
+            // console.log("hello");
+            msg.innerHTML=rev();
+        });
+
+
+        palindrome.addEventListener('click', () => {
+            // console.log("hello");
+            let originalstr =text.value;
+            let revstr=rev();
+            if(revstr==originalstr){
+                msg.innerHTML="String is palindrome";
+            }else{
+                msg.innerHTML="String is not palindrome";
+            }
+            
+
+        
+        });
+
+        });// end of dom
+
+    </script>
+</head>
+<body>
+    Textbox : <input type="text" name="" id="text"><br>
+    <input type="radio" name="rd" id="palindrome"> : palindrome
+    <input type="radio" name="rd" id="reverse"> : reverse
+    <br><hr>
+    <span id="msg">result</span>
+</body>
+</html>
